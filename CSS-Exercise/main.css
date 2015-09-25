@@ -1,0 +1,18 @@
+#header {
+	font-size:50px;
+}
+.section {
+	background-color:yellow;
+}
+
+div p {
+	color:gray;
+}
+h1, h2 {
+	font-family:Arial, sans-serif;
+	margin-bottom:-20px;
+}
+
+div:first-child {
+	font-weight:bold;
+}
