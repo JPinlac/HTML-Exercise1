@@ -1,0 +1,20 @@
+#beginning {
+	padding:0 5px 3px 20px;
+	border: 3px dashed blue;
+	margin:0 auto;
+	width:500px;
+	height 5px;
+}
+#middle {
+	padding:0 12px 30px 2px;
+	border: 3px double green;
+	margin:50px 40px;
+}
+#end {
+	padding:35px 0px 6px 17px;
+	border: 3px groove red;
+	margin:auto;
+}
+p {
+	text-align:center;
+}
