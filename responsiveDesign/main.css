@@ -10,34 +10,35 @@ header {
 	height:70px;
 }
 
-header h1 { 
-	margin: 0;
+h1 {
+		top:20px;
+}
+
+h1 , h3, .caption{ 
 	color:white;
+	margin: 0;
 	text-align:center;
 	font-family:Verdana, sans-serif;
 	position:relative;
-	top:20px;
 }
 
 .block {
 	display:inline-block;
-	width:20%;
-	margin:10px 2%;
+	width:22%;
+	margin:10px 1%;
 	border:2px dashed red;
 }
 
-h3 {
-	text-align: center;
-	color:white;
-}
 img {
 	border:3px solid black;
 	padding:0;
-	margin:10px;
+	margin:10px 0;
+	width:97%;
 }
 
-.caption {
-	color:white;
+#fauxFooter {
+	height:50px;
+	width: 100%;
 }
 
 footer {
@@ -49,27 +50,28 @@ footer {
 }
 
 
+
 @media (max-width:738px) {
 	body {
 		background-color:white;
 	}
 	header {
-		background-color:#EEEEEE;
+		background-color:#EEEEFF;
 		height:110px;
 	}
-	header h1{
-		color:black;
+
+	h1 , h3, .caption{
+		color: black;
 	}
 
 	.block {
-		background-color:black;
-	}
-	.caption {
-		color:white;
+		display:inline;
+		background-color:white;
 	}
 
+
 	footer{
-		background-color:#EEEEEE;
+		background-color:#EEEEFF;
 	}
 }
 
@@ -86,6 +88,7 @@ footer {
 	}
 
 	.block {
+		display:inline;
 		background-color:#AEEEEE;
 	}
 	.caption {
