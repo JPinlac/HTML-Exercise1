@@ -1,0 +1,14 @@
+
+.navbar-brand {
+    font-family: 'BenchNine',"Helvetica Neue",Helvetica,Arial,cursive;
+    color: #fff;
+}
+
+.name {
+	font-size:20px;
+}
+
+#butts {
+	position:relative;
+	top:30px;
+}

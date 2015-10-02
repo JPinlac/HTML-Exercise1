@@ -1,9 +1,33 @@
 
 .navbar-brand {
-    font-family: 'BenchNine',"Helvetica Neue",Helvetica,Arial,cursive;
+    font-family: 'BenchNine',Helvetica,Arial,cursive;
     color: #fff;
 }
 
+header {
+	background-color:black;
+}
 .name {
-	font-size:20px;
+	font-size:3em;
+}
+
+#smiley {
+	max-width:150px;
+}
+
+p{
+	padding:0;
+	margin:0;
+}
+
+.contactButton {
+	max-width:150px;
+}
+
+#butts{
+	padding-top:80px;
+}
+
+section:nth-child(odd){
+	background-color:rgba(170,170,200,.3);
 }
