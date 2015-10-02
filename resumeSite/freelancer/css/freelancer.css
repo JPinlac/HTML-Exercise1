@@ -4,13 +4,10 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
- 
 body {
     overflow-x: hidden;
 }
-.text-muted {
-    color: #777;
-}
+
 p {
     font-size: 20px;
 }
@@ -18,25 +15,16 @@ p {
 p.small {
     font-size: 16px;
 }
-a{
-	 color: #FDB515;
-}
-p{
-font-family: 'QuickSand', "Helvetica Neue",Helvetica,Arial,sans-serif;
-}
+
 a,
 a:hover,
 a:focus,
 a:active,
 a.active {
     outline: 0;
-	color: #fec503;
+    color: #18bc9c;
 }
-/*Transparent top border!*/
-.navbar-default {
-    border-color: transparent;
-    background-color: #3e5871;
-}
+
 h1,
 h2,
 h3,
@@ -44,8 +32,47 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: 'Lato',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+}
+
+hr.star-light,
+hr.star-primary {
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    border: 0;
+    border-top: solid 5px;
+    text-align: center;
+}
+
+hr.star-light:after,
+hr.star-primary:after {
+    content: "\f005";
+    display: inline-block;
+    position: relative;
+    top: -.8em;
+    padding: 0 .25em;
+    font-family: FontAwesome;
+    font-size: 2em;
+}
+
+hr.star-light {
+    border-color: #fff;
+}
+
+hr.star-light:after {
+    color: #fff;
+    background-color: #18bc9c;
+}
+
+hr.star-primary {
+    border-color: #2c3e50;
+}
+
+hr.star-primary:after {
+    color: #2c3e50;
+    background-color: #fff;
 }
 
 .img-centered {
@@ -55,20 +82,12 @@ h6 {
 header {
     text-align: center;
     color: #fff;
-    background-attachment: scroll;
-    background-image: url("skyrim.jpg");
-    background-position: center center;
-    background-repeat: none;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    background: #18bc9c;
 }
 
 header .container {
     padding-top: 100px;
     padding-bottom: 50px;
-	
 }
 
 header img {
@@ -79,7 +98,7 @@ header img {
 header .intro-text .name {
     display: block;
     text-transform: uppercase;
-    font-family: "Lobster",Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 2em;
     font-weight: 700;
 }
@@ -91,8 +110,8 @@ header .intro-text .skills {
 
 @media(min-width:768px) {
     header .container {
-        padding-top: 250px;
-        padding-bottom: 250px;
+        padding-top: 200px;
+        padding-bottom: 100px;
     }
 
     header .intro-text .name {
@@ -107,12 +126,9 @@ header .intro-text .skills {
 @media(min-width:768px) {
     .navbar-fixed-top {
         padding: 25px 0;
-		background-color: transparent;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
-		
-
     }
 
     .navbar-fixed-top .navbar-brand {
@@ -120,33 +136,25 @@ header .intro-text .skills {
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
-		  
     }
-	/*Change the color of Navbar shrinking*/
+
     .navbar-fixed-top.navbar-shrink {
         padding: 10px 0;
-		background-color: #3e5871
     }
 
     .navbar-fixed-top.navbar-shrink .navbar-brand {
         font-size: 1.5em;
-		
     }
 }
 
-.navbar{
+.navbar {
     text-transform: uppercase;
-    font-family: 'QuickSand',Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
-	
 }
 
 .navbar a:focus {
     outline: 0;
-
-    color: #FDB515;
-
-
 }
 
 .navbar .navbar-nav {
@@ -160,8 +168,6 @@ header .intro-text .skills {
 .navbar-default,
 .navbar-inverse {
     border: 0;
-	
-
 }
 
 section {
@@ -174,28 +180,19 @@ section h2 {
 }
 
 section.success {
-    
-	background: #fff; 
-	 border-bottom: 1px solid #e7e7e7;
+    color: #fff;
+    background: #18bc9c;
 }
-#contact{
-text-align:middle;
-color: #fff;
-background: #2a2a2a;
-}
+
 section.success a,
 section.success a:hover,
 section.success a:focus,
 section.success a:active,
 section.success a.active {
     outline: 0;
-	color: #2c3e50;
+    color: #2c3e50;
 }
-section.portfolio{
-color: #fff;
-	background: #3e5871; 
-	 border-bottom: 1px solid #e7e7e7;
-}
+
 @media(max-width:767px) {
     section {
         padding: 75px 0;
@@ -277,7 +274,7 @@ color: #fff;
 .btn-outline:active,
 .btn-outline.active {
     border: solid 2px #fff;
-    color: #2c3e50;
+    color: #18bc9c;
     background: #fff;
 }
 
@@ -330,8 +327,7 @@ color: #fff;
 }
 
 .floating-label-form-group-with-focus label {
-    /* color: #18bc9c; */
-	color: #ffe700;
+    color: #18bc9c;
 }
 
 form .row:first-child .floating-label-form-group {
@@ -349,7 +345,6 @@ footer h3 {
 footer .footer-above {
     padding-top: 50px;
     background-color: #2c3e50;
-		 top-border: 1px solid #e7e7e7;
 }
 
 footer .footer-col {
@@ -357,11 +352,8 @@ footer .footer-col {
 }
 
 footer .footer-below {
-
-text-align: right;
     padding: 25px 0;
-	color: #2c3e50;
-    background-color: #fff;
+    background-color: #233140;
 }
 
 .btn-social {
@@ -464,43 +456,4 @@ text-align: right;
 .portfolio-modal .modal-backdrop {
     display: none;
     opacity: 0;
-}
-
-/* Stuff added */
-
-.navbar-default .navbar-brand {
-    font-family: 'BenchNine',"Helvetica Neue",Helvetica,Arial,cursive;
-    color: #fff;
-}
-/*Hover project name*/
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus,
-.navbar-default .navbar-brand:active,
-.navbar-default .navbar-brand.active {
-     color: #FDB515;
-}
-
-.navbar-default .nav li a:hover,
-.navbar-default .nav li a:focus {
-    outline: 0;
-    color: #FDB515;
-}
-
-.navbar-default .nav li a {
-    text-transform: uppercase;
-    font-family: 'QuickSand',"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 400;
-    letter-spacing: 1px;
-    color: #fff;
-}
-
-	
-	.section-heading {
-    margin-bottom: 30px;
-}
-
-.section-heading-spacer {
-    float: left;
-    width: 200px;
-    border-top: 3px solid #e7e7e7;
 }
