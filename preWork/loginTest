@@ -1,0 +1,20 @@
+
+//login stored in system is
+//login: admin
+//password: hunter2
+
+var systemLogin = 'admin';
+var systemPassword = 'hunter2';
+
+var login = function () {
+  var userLogin = raw_input("Please enter your username.");
+  var userPassword = raw_input("Please enter your password.");
+  if (userLogin === systemLogin && userPassword === systemPassword) {
+    console.log("Congrats you logged in");
+  }
+  else {
+    console.log("Sorry please try again.");
+  }
+  }
+
+login();
