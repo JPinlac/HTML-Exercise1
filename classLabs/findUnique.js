@@ -1,6 +1,5 @@
 function findUnique(array) {
 
-    var count = 0;
     var object = {};
 
     for (var i = 0; i < array.length; i++) {
