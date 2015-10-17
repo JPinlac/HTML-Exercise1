@@ -1,0 +1,31 @@
+div {
+    height:150px;
+    width: 150px;
+    background-color:green;
+}
+
+
+.tl {
+    position: fixed;
+    top:0;
+    left:0;
+
+}
+.tr {
+    position: fixed;
+    top:0;
+    right:0;
+    
+}
+.br {
+    position: fixed;
+    bottom:0;
+    right:0;
+    
+}
+.bl {
+    position: fixed;
+    bottom:0;
+    left:0;
+    
+}
