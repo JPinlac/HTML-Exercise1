@@ -1,0 +1,23 @@
+div {
+	text-align:center;
+	vertical-align:middle;
+	height: 30px;
+	width: 30px;
+	display:inline-block;
+	line-height:30px;
+}
+a {
+	display:block;
+}
+
+.clean {
+		background-color: gray;
+}
+
+.unclean {
+	background-color:brown;
+}
+
+.obstacle {
+	background-color:blue;
+}
