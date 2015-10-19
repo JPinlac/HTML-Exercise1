@@ -112,7 +112,7 @@ function findObstacles() {
 	var count = 0;
 	var grid = document.body.getElementsByTagName('div')
 	for(var i = 0; i <grid.length; i++){
-		if(grid[i].innerHTML !==''){
+		if(grid[i].innerHTML !=='' && grid[i].innerHTML !=='O'){
 			grid[i].className = 'obstacle';
 			count++;
 		}
@@ -121,19 +121,30 @@ function findObstacles() {
 }
 
 function cleaningAlgo(a){
+	console.log(a)
 	setTimeout(function(){
 		// console.log(document.getElementById('row'+robotV2[0]+'col'+robotV2[1]++).className)
+
 		if (document.getElementById('row'+robotV2[0]+'col'+(robotV2[1]+1)).className==='unclean'){
-			movePos(robotV2[0],robotV2[1]);
-			console.log(robotV2)
+			movePos(robotV2[0],robotV2[1]+1);
+		}
+		else if (document.getElementById('row'+(robotV2[0]-1)+'col'+robotV2[1]).className==='unclean') {
+			movePos(robotV2[0]-1,robotV2[1]);
+		}
+		else if (document.getElementById('row'+(robotV2[0]+1)+'col'+robotV2[1]).className==='unclean') {
+			movePos(robotV2[0]+1,robotV2[1]);
+		}
+		else if (document.getElementById('row'+(robotV2[0]+1)+'col'+robotV2[1]).className==='unclean') {
+			movePos(robotV2[0]+1,robotV2[1]);
 		}
 
-
-
+		a--;
+		if (a>1)
+			cleaningAlgo(a);
 
 	},100)
 }
-cleaningAlgo(width*width - findObstacles);
+cleaningAlgo(width*width - findObstacles());
 // cleanSquare(width*width);
 
 
