@@ -55,15 +55,18 @@ var posRow = 0;
 var posCol = 0;
 var currentLocation = document.getElementById('row'+posRow+'col'+posCol);
 clean();
-
+//sets the position of the robot given coordinates
 function setPos(row,col){
 	currentLocation = document.getElementById('row'+row+'col'+col);
 }
+
+//sets class name to clean and update visual robot
 function clean() {
 	currentLocation.innerHTML = 'O';
 	currentLocation.className = 'clean';
 
 }
+//given direction moves robot left, right, up, or down
 function move(direction) {
 	switch(direction){
 		case 'right':
@@ -92,7 +95,7 @@ function move(direction) {
 			break;
 	}
 }
-
+//function that cleans all rows one by one
 var rowCount = 0;
 function cleanSquare(a) {
 	setTimeout(function(){
@@ -121,11 +124,12 @@ function cleanSquare(a) {
 }
 
 
-//create robot version 2 now with ai!
+//create robot version 2!
 var robotV2 = [0,0,'east'];
 var currentLocation = document.getElementById('row'+robotV2[0]+'col'+robotV2[1]);
 movePos(robotV2[0],robotV2[1]);
 
+//now moves robot according to cardinal directions
 function movePos(direction) {
 	switch(direction){
 		case 'east':
@@ -155,7 +159,7 @@ function movePos(direction) {
 	}
 }
 
-
+//finds all obstacles and changes the class name of those locations
 function findObstacles() {
 	var count = 0;
 	var grid = document.body.getElementsByTagName('div')
@@ -167,6 +171,7 @@ function findObstacles() {
 	}
 	return count;
 }
+
 
 function cleaningAlgo(a){
 	console.log(a)
