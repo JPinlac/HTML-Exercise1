@@ -21,3 +21,7 @@ a {
 .obstacle {
 	background-color:yellow;
 }
+
+.border {
+	background-color:black;
+}
