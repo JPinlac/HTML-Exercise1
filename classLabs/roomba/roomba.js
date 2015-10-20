@@ -14,6 +14,10 @@ function pickAlgo() {
 		case 'best':
 			spiralAlgo(width*width - findObstacles(),robotV2);
 			break;
+		default:
+			console.log('oops, please enter simple, better, or best.')
+			pickAlgo();
+			break;
 	}
 }
 
