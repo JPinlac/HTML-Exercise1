@@ -122,12 +122,33 @@ var robotV2 = [0,0,'east'];
 var currentLocation = document.getElementById('row'+robotV2[0]+'col'+robotV2[1]);
 movePos(robotV2[0],robotV2[1]);
 
-function movePos(row,col) {
-	currentLocation.innerHTML ='';
-	setPos(row,col);
-	robotV2[0] = row;
-	robotV2[1] = col;
-	clean();
+function movePos(direction) {
+	switch(direction){
+		case 'east':
+			currentLocation.innerHTML = '';
+			robotV2[1]++;
+			setPos(robotV2[0],robotV2[1]);
+			clean();
+			break;
+		case 'west':
+			currentLocation.innerHTML = '';
+			robotV2[1]--;
+			setPos(robotV2[0],robotV2[1]);
+			clean();
+			break;
+		case 'north':
+			currentLocation.innerHTML = '';
+			robotV2[0]--;
+			setPos(robotV2[0],robotV2[1]);
+			clean();
+			break;
+		case 'south':
+			currentLocation.innerHTML = '';
+			robotV2[0]++;
+			setPos(robotV2[0],robotV2[1]);
+			clean();
+			break;
+	}
 }
 
 
@@ -146,18 +167,17 @@ function findObstacles() {
 function cleaningAlgo(a){
 	console.log(a)
 	setTimeout(function(){
-		// console.log(document.getElementById('row'+robotV2[0]+'col'+robotV2[1]++).className)
 		if (document.getElementById('row'+robotV2[0]+'col'+(robotV2[1]+1)).className==='unclean'){ 
-			movePos(robotV2[0],robotV2[1]+1); //east
+			movePos('east');
 		}
 		else if (document.getElementById('row'+(robotV2[0]-1)+'col'+robotV2[1]).className==='unclean') {
-			movePos(robotV2[0]-1,robotV2[1]); //north
+			movePos('north'); 
 		}
 		else if (document.getElementById('row'+(robotV2[0]+1)+'col'+robotV2[1]).className==='unclean') {
-			movePos(robotV2[0]+1,robotV2[1]); //south
+			movePos('south'); 
 		}
 		else if (document.getElementById('row'+robotV2[0]+'col'+(robotV2[1]-1)).className==='unclean') {
-			movePos(robotV2[0],robotV2[1]-1); //west
+			movePos('west'); 
 		}
 
 		a--;
@@ -174,80 +194,80 @@ function spiralAlgo(a,robot){
 		switch (robotV2[2]) {
 			case 'north':
 				if (document.getElementById('row'+robotV2[0]+'col'+(robotV2[1]-1)).className==='unclean') {
-					movePos(robotV2[0],robotV2[1]-1); //west
+					movePos('west');
 					robotV2[2]='west';
 				}
 				else if (document.getElementById('row'+(robotV2[0]-1)+'col'+robotV2[1]).className==='unclean') {
-					movePos(robotV2[0]-1,robotV2[1]); //north
+					movePos('north');
 					robotV2[2]='north'
 				}
 				else if (document.getElementById('row'+robotV2[0]+'col'+(robotV2[1]+1)).className==='unclean') { 
-					movePos(robotV2[0],robotV2[1]+1); //east
+					movePos('east');
 					robotV2[2]='east';
 				}
 				else {
 					if (a===2) break;
-					movePos(robotV2[0]+1,robotV2[1]); //south
+					movePos('south');
 					robotV2[2]='north';
 					a++;
 				}
 				break;
 			case 'east':
 				if (document.getElementById('row'+(robotV2[0]-1)+'col'+robotV2[1]).className==='unclean') {
-					movePos(robotV2[0]-1,robotV2[1]); //north
+					movePos('north');
 					robotV2[2]='north';
 				}
 				else if (document.getElementById('row'+robotV2[0]+'col'+(robotV2[1]+1)).className==='unclean') { 
-					movePos(robotV2[0],robotV2[1]+1); //east
+					movePos('east');
 					robotV2[2]='east';
 				}
 				else if (document.getElementById('row'+(robotV2[0]+1)+'col'+robotV2[1]).className==='unclean') {
-					movePos(robotV2[0]+1,robotV2[1]); //south
+					movePos('south');
 					robotV2[2]='south';
 				}
 				else {
 					if (a===2) break;
-					movePos(robotV2[0],robotV2[1]-1); //west
+					movePos('west');
 					robotV2[2]='east';
 					a++;
 				}
 				break;
 			case 'south':
 				if (document.getElementById('row'+robotV2[0]+'col'+(robotV2[1]+1)).className==='unclean') { 
-					movePos(robotV2[0],robotV2[1]+1); //east
+					movePos('east');
 					robotV2[2]='east'
 				}
 				else if (document.getElementById('row'+(robotV2[0]+1)+'col'+robotV2[1]).className==='unclean') {
-					movePos(robotV2[0]+1,robotV2[1]); //south
+					movePos('south');
 					robotV2[2]='south';
 				}
 				else if (document.getElementById('row'+robotV2[0]+'col'+(robotV2[1]-1)).className==='unclean') {
-					movePos(robotV2[0],robotV2[1]-1); //west
+					movePos('west');
 					robotV2[2]='west';
 				}
 				else {
 					if (a===2) break;
-					movePos(robotV2[0]-1,robotV2[1]); //north
+					movePos('north');
 					robotV2[2]='south';
 					a++;
 				}
 				break;
 			case 'west':
 				if (document.getElementById('row'+(robotV2[0]+1)+'col'+robotV2[1]).className==='unclean') {
-					movePos(robotV2[0]+1,robotV2[1]); //south
+					movePos('south');
 					robotV2[2]='south';
 				}
 				else if (document.getElementById('row'+robotV2[0]+'col'+(robotV2[1]-1)).className==='unclean') {
-					movePos(robotV2[0],robotV2[1]-1); //west
+					movePos('west'); 
 					robotV2[2]='west';
 				}
 				else if (document.getElementById('row'+(robotV2[0]-1)+'col'+robotV2[1]).className==='unclean') {
-					movePos(robotV2[0]-1,robotV2[1]); //north
+					movePos('north'); 
 					robotV2[2]='north';
 				}
 				else{
 					if (a===2) break;
-					movePos(robotV2[0],robotV2[1]+1); //east
+					movePos('east'); 
 					robotV2[2]='west';
 					a++;
 				}
@@ -263,7 +283,7 @@ function spiralAlgo(a,robot){
 }
 
 
-
+findObstacles();
 pickAlgo();
 
 }
