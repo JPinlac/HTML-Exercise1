@@ -38,7 +38,14 @@ $(document).ready(function(){
         url: 'https://www.reddit.com/r/aww.json',
         method: 'Get',
         success: function(data){
-            console.log(data.data.children[22].data.preview.images[0].source.url);
+            // console.log(data.data.children.length)
+            for (var each in data.data.children){
+
+                var pic = (data.data.children[each].data.preview.images[0].source.url)
+                $('body').append('<img style="width:150px;"src="'+pic+'">');
+            }
+            // var pic = (data.data.children[22].data.preview.images[0].source.url);
+            // $('body').append('<img style="height:150px; width 150px;"src="'+pic+'">');
         }
     })
 
