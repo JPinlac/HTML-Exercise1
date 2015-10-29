@@ -1,0 +1,11 @@
+input{
+    display:block;
+}
+
+.invalid {
+    background-color:red;
+}
+
+.valid {
+    background-color:green;
+}
