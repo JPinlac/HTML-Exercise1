@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Angular Search</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src='javascript.js'></script>
+</head>
+<body>
+    <h1>What are you looking for?</h1>
+    <div ng-app='myApp'>
+<!--         <div ng-init="moods=[{name:'Jon', mood:'tired'},{name:'Juan', mood:'hyper'},{name:'John', mood:'relaxed'},{name:'Joan', mood:'chippy'}]"> -->
+        <div ng-controller="moodSearcher">
+            <input type='text' ng-model='view' ng-init="view='  '">
+            <!-- <h3>Do you want the {{view}}</h3> -->
+            <h3>Is this what your looking for?</h3><hr>
+            
+            <div ng-repeat="worker in workers | filter: myFilter(view)">{{worker.name+' is '+worker.mood}}</div>
+            
+        </div>
+<!--         </div> -->
+    </div>
+</body>
+</html> 
