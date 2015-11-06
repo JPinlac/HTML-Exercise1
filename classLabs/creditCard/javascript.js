@@ -38,19 +38,31 @@ $(document).ready(function(){
         var dd = today.getDate();
         var mm = today.getMonth()+1; //January is 0!
         var yyyy = today.getFullYear();
-
         if(dd<10)
             dd='0'+dd
-
         if(mm<10) 
-        mm='0'+mm
+            mm='0'+mm
 
         today = yyyy+'-'+mm+'-'+dd;
 
         console.log(today)
         console.log($(this).val())
-        if($(this).val() > today)
+        console.log(typeof today)
+        console.log(typeof $(this).val())  
+
+        var newDate1 = new Date(today)
+        console.log(newDate1)
+        console.log(typeof newDate1)
+        var newDate2 = new Date($(this).val())
+        console.log(newDate2)
+        console.log(typeof newDate2)
+
+
+        if($(this).val() > today){
+        // if(newDate2>newDate1){
             $(this).toggleClass('valid')
+            $('body').append('<h1>You have a valid credit card!</h1>')
+        }
         else
             $(this).toggleClass('invalid')
     })
