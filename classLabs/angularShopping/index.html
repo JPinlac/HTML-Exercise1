@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="practiceMod">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <div ng-controller="counterController">
+        <input type="text" ng-model="item" placeholder="Item">
+        <input type="text" ng-model="price" placeholder="Price">
+        <button ng-click="add(item, price)">Add</button><br>
+        <input type="text" ng-model="searchTerm" placeholder="search">
+        <div ng-repeat="object in list | filter:searchTerm">{{object.name + " price " + object.price}}</div>
+        {{total | currency}}
+​
+    </div>
+</body>
+</html>

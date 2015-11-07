@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/*    div {
+        margin:20px;
+        height:300px;
+        width: 300px;
+    }
+    img {
+        width:100%;
+    }*/
+
+</style>
+    <!-- <link href='main.css' rel='stylesheet'> -->
+    <title>angularFUN</title>
+    <script src='/home/jonathan/API/angular.min.js'></script>
+    <script src='javascript.js'></script>
+</head>
+<body ng-app='myApp'>
+<!-- <div ng-init='pics=["https://s3.amazonaws.com/vice_asset_uploader/files/1416599337phantogram.jpeg","http://www2.pictures.zimbio.com/gi/Sarah+Barthel+22nd+Annual+KROQ+Weenie+Roast+Xuh-FXDIWiSl.jpg"];names=["Josh", "Sarah"]' >
+<div ng-init='members=[{name: "Josh", link: "https://s3.amazonaws.com/vice_asset_uploader/files/1416599337phantogram.jpeg"},{name: "Sarah", link: "http://www2.pictures.zimbio.com/gi/Sarah+Barthel+22nd+Annual+KROQ+Weenie+Roast+Xuh-FXDIWiSl.jpg"}]' >
+    <div ng-repeat="member in members">{{member.name}}<img src={{member.link}}></div>
+</div>
+ -->
+<div ng-controller='angularSearch'>
+    <input ng-model='view' ng-init='view="  "'>
+    <div ng-repeat='worker in workers | filter: myFilter(view)'>{{worker.name + " is " + worker.mood +"."}}</div>
+</div>
+
+
+
+</body>
+</html>
